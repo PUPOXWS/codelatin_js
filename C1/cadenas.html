@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+
+    <script>
+        var cadena = "Texto prueba 2023 ";
+        console.log(cadena);
+        var cadena2 = cadena.toUpperCase();
+        console.log(cadena2);
+        var cadena3 = cadena.search("prueba 2023");
+        console.log(cadena3);
+        var cadena4 = cadena.substring(cadena4,6);
+        console.log(cadena4);
+        cadena4 = cadena4.toUpperCase();
+        var cadena5 = cadena.replace("prueba",cadena4);
+        console.log(cadena5);
+
+        var frutas = ["manzana","pera","banano","mango"];
+        for(var i=0;i<frutas.length;i++){
+            // var division = i%2;
+            if(i%2 === 0 ){
+                // var fruta2 = frutas[i].toUpperCase();
+                console.log(`${cadena} ${frutas[i].toUpperCase()}`);
+            }
+            else{
+                console.log(`${cadena} ${frutas[i]}`);
+            }
+            
+        }
+        
+
+        
+
+    </script>
+</body>
+</html>

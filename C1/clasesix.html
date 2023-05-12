@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css"> 
+        .color { color: blue;}
+    </style>
+</head>
+<body>
+    <!-- <div id="caja">
+        <p>Parrafo dos</p>
+        <p> Texto</p>
+        <p>Parrafo tres</p>
+    </div> -->
+
+    <!-- <form>
+        <label><input type="checkbox">Likes</label>
+    </form> -->
+
+    <div>
+        <p>Texto2</p>
+        <p>Texto3</p>
+    </div>
+
+    <script>
+        // document.getElementById("texto").style.color="green";
+        // var text = document.getElementsByTagName("p");
+        // for(var i=0; i<text.length; i++) {
+        //     text[i].style.color="red";
+        //     alert(`Mostrando parrafos ${i}`);
+        // }
+        // var text2 = document.getElementsByClassName("parrafo");
+        // for (var i=0; i<text2.length; i++) {
+        //     text2[i].style.color="green";
+        // }
+        // var box = document.querySelectorAll("#caja p");
+        // for (var i=0; i<box.length; i++){
+        //     box[i].style.color="green";
+        // }
+        // var micolor = document.querySelector("p");
+        // micolor.className="color";
+        // var likes = document.querySelector("input");
+        // likes.setAttribute("checked", "checked");
+        var etiqueta = document.createElement("p");
+        var texto = document.createTextNode("TEXTO PRUEBA");
+        etiqueta.appendChild(texto);
+        var micaja = document.querySelector("div");
+        micaja.appendChild(etiqueta);
+        micaja.removeChild(micaja.children[0]);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: peru;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mover Mouse</h1>
+    <div></div>
+    <!-- <button>Click</button> -->
+    <!-- <a href="https://www.youtube.com/">Ir a YouTube</a> -->
+    <!-- <form method="get">
+        <label>Nombre <input type="text" name="name"></label>
+        <input type="submit" value="Enviar">
+    </form> -->    
+
+    <script>
+        var cabecera = document.querySelector("h1");
+        var caja = document.querySelector("div");
+        caja.addEventListener("mouseover", function() {
+            cabecera.innerHTML = "Mouse Over";            
+        });
+        caja.addEventListener("mouseout", function() {
+            cabecera.innerHTML = "Mouse Out";
+        });
+        caja.addEventListener("click", function(){
+            cabecera.innerHTML = "Click";
+        });
+
+        // var data = document.querySelector("form");
+        // data.addEventListener("submit", function(event) {
+        //     event.preventDefault();
+        //     var data2 = document.querySelector("input").value;
+        //     alert(data2);
+        // });
+
+        // var link = document.querySelector("a");
+
+        // link.addEventListener("click", function(e){
+        //     // e.preventDefault();
+        //     alert("Error 404 Not Found");
+        // });
+        // function message (){
+        //     alert("Has hecho clicked");            
+        // }
+        // btn.addEventListener("click", function(){
+        //     alert("Has hecho clicked");
+        // });
+        // btn.addEventListener("click", function(mievento){
+        //     alert("Has hecho click");
+        //     mievento1.target.style.backgroundColor = "red";            
+        // });
+
+
+
+        // btn.onclick = function (){
+        //     alert("clicked");
+        // };
+
+        
+    </script>
+</body>
+</html>
