@@ -57,6 +57,8 @@ const animacionestados = [
   },
 ];
 
+
+
 animacionestados.forEach((estado,indice) => {
     let frame = {
         localizacion : [],        
@@ -80,8 +82,10 @@ function animar(){
     let framex = anchosprite*posicion;
     let framey = animacionsprite[estado_personaje].localizacion[posicion].y;
     ctx.drawImage(imagenjugador, framex, framey, anchosprite, altosprite, 0, 0, anchosprite, altosprite);
-    framejuego ++;
+    framejuego++;
     requestAnimationFrame(animar);
 }
 
 animar();
+
+
