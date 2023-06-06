@@ -23,6 +23,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
+
 body {
   background: var(--color-fondo);
   color: var(--color-texto);
@@ -34,10 +35,15 @@ body {
   left: 0;
   width: 100%;
   padding: 2rem 7%;
-  background: green;
+  background: transparent;
   display: flex;
   align-items: center;
   z-index: 100;
+}
+
+.header.sticky {
+  background: var(--color-fondo);
+  box-shadow: 0 0.1rem 1rem var(--color-sombra);
 }
 
 .logo {
@@ -56,6 +62,14 @@ body {
   margin-right: 2.8rem;
 }
 
+.header.sticky .menu a {
+  color: black;
+}
+
+.header.sticky .menu a.activar {
+  color: var(--color-principal);
+}
+
 .menu a.activar::before {
   content: "";
   position: absolute;
@@ -66,10 +80,19 @@ body {
   background: var(--color-blanco);
 }
 
+.header.sticky .menu a::before {
+  background: var(--color-principal);
+}
+
 #icono-noche {
   font-size: 2.4rem;
   color: var(--color-blanco);
   cursor: pointer;
+}
+
+.header.sticky #icono-noche {
+  color: var(--color-principal);
+  opacity: 0.9;
 }
 
 section {
@@ -91,10 +114,12 @@ section {
   line-height: 0.3;
   color: black;
 }
+
 .content-inicio h1 {
   font-size: 3.2rem;
   font-weight: 700;
   color: black;
+  margin-bottom: 0.3rem;
 }
 
 .content-inicio p {
@@ -139,4 +164,117 @@ section {
 .btn:hover {
   background: transparent;
   color: var(--color-principal);
+  border-color: var(--color-principal);
+}
+
+.inicio .containerprofesion {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 770px;
+  height: 770px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.inicio .containerprofesion .cajaprofesion {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 770px;
+  height: 770px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio .cajaprofesion .profesion {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-principal);
+  transform: rotate(calc(360deg / 4 * var(--i)));
+  transform-origin: 384px;
+  background: var(--color-fondo);
+  padding: 13px 0;
+}
+
+.inicio .cajaprofesion .profesion:nth-child(1)i {
+  margin-right: 15px;
+}
+
+.inicio .cajaprofesion .profesion:nth-child(2),
+.inicio .cajaprofesion .profesion:nth-child(4) {
+  margin-bottom: 20px;
+}
+
+.inicio .profesion i {
+  font-size: 3.8rem;
+}
+
+.inicio .profesion h3 {
+  font-size: 3.2rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.inicio .cajaprofesion .circle {
+  width: 560px;
+  height: 560px;
+  border: 3px solid var(--color-principal);
+  border-radius: 50%;
+}
+
+.inicio .containerprofesion .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 384px solid var(--color-principal);
+  border-right: 384px solid var(--color-principal);
+  border-bottom: 384px solid var(--color-principal);
+  border-left: 384px solid transparent;
+}
+
+span {
+  color: var(--color-principal);
+}
+
+.acerca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.imagenacerca img {
+  width: 40vw;
+}
+
+.cabecera {
+  font-size: 4.5rem;
+  text-align: center;
+  color: black;
+}
+
+.contentacerca h2 {
+  text-align: left;
+  line-height: 1.2;
+  color: black;
+}
+
+.contentacerca h3 {
+  font-size: 2rem;
+  color: black;
+}
+
+.contentacerca p {
+  font-size: 1, 8rem;
+  margin: 2rem 0 3rem;
+  color: black;
 }
