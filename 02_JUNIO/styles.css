@@ -278,3 +278,197 @@ span {
   margin: 2rem 0 3rem;
   color: black;
 }
+
+.servicios {
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+
+.servicios h2 {
+  margin-bottom: 5rem;
+}
+
+.servicios .container-servicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.container-servicios .caja-servicios {
+  flex: 1 1 30rem;
+  background: #1cbeb1;
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.1rem 0.5rem var(--color-sombra);
+  text-align: center;
+  border-top: 0.6rem solid burlywood;
+  border-bottom: 0.6rem solid burlywood;
+  transition: 0.5s ease;
+}
+
+.container-servicios .caja-servicios:hover {
+  box-shadow: 0 0.1rem 2rem var(--color-sombra);
+  transform: scale(1.02);
+}
+
+.caja-servicios i {
+  font-size: 7rem;
+  color: bisque;
+}
+
+.caja-servicios h3 {
+  font-size: 2.6rem;
+  color: black;
+  transition: 0.5s ease;
+}
+
+.caja-servicios:hover h3 {
+  color: chocolate;
+}
+
+.caja-servicios p {
+  font-size: 1.4rem;
+  margin: 1rem 0 2rem;
+  color: black;
+}
+
+.portafolio {
+  padding-bottom: 10rem;
+}
+
+.portafolio h2 {
+  margin-bottom: 4rem;
+  color: black;
+}
+
+.portafolio .container-portafolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.container-portafolio .caja-portafolio {
+  position: relative;
+  display: flex;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.caja-portafolio img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.caja-portafolio:hover img {
+  transform: scale(1.1);
+}
+
+.caja-portafolio .layer-portafolio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(0, 0, 0, 0.1), var(--color-principal));
+  color: gold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 2rem;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.caja-portafolio:hover .layer-portafolio {
+  opacity: 1;
+}
+
+.layer-portafolio h4 {
+  font-size: 2.6rem;
+}
+
+.layer-portafolio p {
+  font-size: 1.4rem;
+  margin: 0.3rem 0 1rem;
+}
+
+.layer-portafolio a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  background: whitesmoke;
+  border-radius: 50%;
+}
+
+.layer-portafolio a i {
+  font-size: 2rem;
+  color: coral;
+}
+
+.container-referencia {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 1rem;
+}
+
+.container-referencia .referencia-principal {
+  position: relative;
+  max-width: 90rem;
+  width: 100%;
+  padding: 5rem;
+}
+
+.referencia-principal .caja-referencia {
+  background: var(--color-principal);
+  padding: 1rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.content-referencia .slider-referencia {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-fondo);
+  border-radius: 2rem;
+  box-shadow: 0 0.1rem 0.5rem var(--color-sombra);
+  padding: 3rem 5rem;
+  border-top: 0.8rem solid var(--color-principal);
+  border-bottom: 0.8rem solid var(--color-principal);
+}
+
+.slider-referencia img {
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.5rem solid var(--color-fondo);
+  outline: 0.5rem solid rgb(196, 22, 144);
+}
+
+.slider-referencia h3 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: black;
+}
+
+.slider-referencia p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: black;
+}
+
+.caja-referencia .swiper-button-next,
+.caja-referencia .swiper-button-prev {
+  color: crimson;
+}
