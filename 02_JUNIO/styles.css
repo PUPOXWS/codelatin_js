@@ -19,6 +19,12 @@
   --color-sombra: rgb(0, 0, 0, 0.2);
 }
 
+.modooscuro {
+  --color-fondo: #040329;
+  --color-texto: #ffff;
+  --color-sombra: rgb(0, 0, 0, .7);
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -88,6 +94,12 @@ body {
   font-size: 2.4rem;
   color: var(--color-blanco);
   cursor: pointer;
+}
+
+#icono-menu {
+  font-size: 3.6rem;
+  color: black;
+  display: none;
 }
 
 .header.sticky #icono-noche {
@@ -471,4 +483,323 @@ span {
 .caja-referencia .swiper-button-next,
 .caja-referencia .swiper-button-prev {
   color: crimson;
+}
+
+/*Contacto*/
+.contacto h2 {
+  margin-bottom: 3rem;
+}
+
+.contacto form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contacto form .formulario {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacto form .formulario input,
+.contacto form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: black;
+  background: var(--color-fondo);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+  box-shadow: 0 0.1rem 0.5rem var(--color-sombra);
+}
+
+.contacto form textarea {
+  resize: none;
+}
+
+.contacto form .formulario input {
+  width: 49%;
+}
+
+.contacto form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+/*Footer*/
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 7%;
+  background: var(--color-principal);
+}
+
+.texto-pie p {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.icono-pie a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: beige;
+  border-radius: 0.8rem;
+  border: 0.2rem solid var(--color-principal);
+  outline: 0.2rem solid transparent;
+  transition: 0.5s ease;
+}
+
+.icono-pie a:hover {
+  outline-color: var(--color-texto);
+}
+
+.icono-pie a i {
+  font-size: 2.4rem;
+  color: darkgrey;
+}
+
+/*MOVILES*/
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+  .inicio .containerprofesion {
+    height: 85.8rem;
+  }
+  .inicio .containerprofesion .cajaprofesion {
+    right: -12rem;
+    height: 85.8rem;
+  }
+  .inicio .containerprofesion .overlay {
+    right: -9rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .inicio .containerprofesion .cajaprofesion {
+    right: -22rem;
+  }
+  .inicio .containerprofesion .overlay {
+    right: -15rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .menu a:nth-child(1),
+  .menu a:nth-child(2) {
+    color: var(--color-principal);
+  }
+  .menu a.activar::before {
+    background: var(--color-principal);
+    opacity: 0.7;
+  }
+  .inicio .content-inicio {
+    max-width: 50rem;
+  }
+  .inicio .containerprofesion .cajaprofesion {
+    right: -45rem;
+  }
+  .inicio .containerprofesion .overlay {
+    right: -39.5rem;
+  }
+  .servicios,
+  .portafolio {
+    padding-bottom: 7rem;
+  }
+  .contacto {
+    min-height: auto;
+  }
+  .pie {
+    padding: 2rem 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  #icono-menu {
+    display: block;
+  }
+  #icono-noche {
+    position: absolute;
+    right: 7rem;
+    font-size: 2.6rem;
+    color: black;
+    margin-bottom: 0.1rem;
+  }
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--color-fondo);
+    border-top: 0.1rem solid rgb(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
+    display: none;
+  }
+  .menu.activar {
+    display: block;
+  }
+  .menu a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: black;
+  }
+  .menu a:nth-child(1),
+  .menu a:nth-child(2) {
+    color: black;
+  }
+  .menu a.activar {
+    color: var(--color-principal);
+  }
+  .menu a::before {
+    display: none;
+  }
+  .inicio {
+    padding: 0 3% 23rem;
+    justify-content: center;
+    text-align: center;
+  }
+  .content-inicio h3 {
+    font-size: 2.6rem;
+  }
+  .content-inicio h1 {
+    font-size: 5rem;
+  }
+  .content-inicio .iconos_sociales a {
+    margin: 2.5rem 0.75rem 3rem;
+  }
+  .inicio .containerprofesion {
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .inicio .containerprofesion .cajaprofesion {
+    position: fixed;
+    top: 60%;
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+  .inicio .cajaprofesion .profesion {
+    padding: 0 13px;
+    left: auto;
+    transform-origin: 0;
+  }
+  .inicio .cajaprofesion .profesion:nth-child(1) {
+    transform: rotate(-90deg) translate(-120px, -210px);
+  }
+  .inicio .cajaprofesion .profesion:nth-child(1) i {
+    margin-right: 0;
+  }
+  .inicio .cajaprofesion .profesion:nth-child(2) {
+    transform: rotate(0deg) translate(0px, -335px);
+  }
+  .inicio .cajaprofesion .profesion:nth-child(3) {
+    transform: rotate(90deg) translate(-115px, -450px);
+  }
+  .inicio .cajaprofesion .profesion:nth-child(4) {
+    transform: rotate(180deg) translate(-220px, -335px);
+  }
+  .inicio .cajaprofesion .circle {
+    position: fixed;
+    width: 670px;
+    height: 670px;
+    z-index: -1;
+  }
+  .inicio .containerprofesion .overlay {
+    position: fixed;
+    top: 70rem;
+    left: 50%;
+    right: 0;
+    transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
+    border-width: 23.9rem;
+  }
+  .acerca {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .acerca .contentacerca h2 {
+    text-align: center;
+  }
+  .imagenacerca img {
+    width: 70vw;
+    margin-top: -2rem;
+  }
+  .servicios h2,
+  .portafolio h2 {
+    margin-bottom: 3rem;
+  }
+  .portafolio .container-portafolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container-referencia .referencia-principal {
+    padding: 5rem 0;
+  }
+  .content-referencia .slider-referencia {
+    padding: 3rem 2rem;
+  }
+  .caja-referencia .swiper-button-next,
+  .caja-referencia .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 617px) {
+  .portafolio .container-portafolio {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  #icono-noche {
+    right: 6rem;
+  }
+  .inicio {
+    padding: 0 3% 30rem;
+  }
+  .inicio .cajaprofesion .profesion:nth-child(1) {
+    transform: rotate(-90deg) translate(-110px, -220px);
+  }
+  .inicio .cajaprofesion .profesion:nth-child(2) {
+    transform: rotate(0deg) translate(5px, -335px);
+  }
+  .inicio .cajaprofesion .profesion:nth-child(3) {
+    transform: rotate(90deg) translate(-105px, -440px);
+  }
+  .inicio .cajaprofesion .profesion:nth-child(4) {
+    transform: rotate(180deg) translate(-210px, -335px);
+  }
+  .contacto form .formulario input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 365px) {
+  .imagenacerca img {
+    width: 90vw;    
+  }
+  .pie {
+    flex-direction: column-reverse;
+  }
+  .pie p{
+    text-align: center;
+    margin-top: 2rem;
+  }
 }

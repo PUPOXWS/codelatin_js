@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <title>Document</title>
+    <title>Proyecto</title>
   </head>
   <body>
     <header class="header">
@@ -21,12 +21,13 @@
 
       <nav class="menu">
         <a href="#inicio" class="activar">Inicio</a>
-        <a href="#acerca">Sobre mi</a>
+        <a href="#idacerca">Sobre mi</a>
         <a href="#servicios">Servicios</a>
         <a href="#portafolio">Portafolio</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="bx bx-moon" id="icono-noche"></div>
+      <div class="bx bx-menu" id="icono-menu"></div>      
     </header>
 
     <section class="inicio" id="inicio">
@@ -69,7 +70,8 @@
         <div class="overlay"></div>
       </div>
     </section>
-    <section class="acerca" id="#idacerca">
+    
+    <section class="acerca" id="idacerca">
       <div class="imagenacerca">
         <img src="saludo.webp" alt="" />
       </div>
@@ -86,7 +88,7 @@
       </div>
     </section>
 
-    <section class="servicios" id="#servicios">
+    <section class="servicios" id="servicios">
       <h2 class="cabecera">Mis <span> Servicios</span></h2>
       <div class="container-servicios">
         <div class="caja-servicios">
@@ -125,7 +127,7 @@
       </div>
     </section>
 
-    <section class="portafolio" id="#portafolio">
+    <section class="portafolio" id="portafolio">
       <h2 class="cabecera">Mis <span> Proyectos</span></h2>
       <div class="container-portafolio">
         <div class="caja-portafolio">
@@ -234,7 +236,39 @@
       </div>
     </div>
 
+    <section id="contacto" class="contacto">
+      <h2 class="cabecera"><span>Contactame</span></h2>
+      <form action="#">
+        <div class="formulario">
+          <input type="text" placeholder="Nombre Completo" />
+          <input type="email" placeholder="Correo electronico" />
+        </div>
+        <div class="formulario">
+          <input type="number" placeholder="Telefono" />
+          <input type="text" placeholder="Asunto Correo" />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Escribe tu mensaje"
+        ></textarea>
+        <input type="submit" value="Enviar Mensaje" class="btn">
+      </form>
+    </section>
+
+    <footer class="pie">
+      <div class="texto-pie">
+        <p>&COPY;For PUPOX 2023</p>
+      </div>
+      <div class="icono-pie">
+       <a href="#inicio"><i class='bx bx-up-arrow-alt'></i></a> 
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
   </body>
 </html>
